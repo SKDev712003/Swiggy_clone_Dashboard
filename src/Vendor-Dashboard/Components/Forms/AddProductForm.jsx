@@ -49,7 +49,7 @@ const productHandler = async(e)=>{
       formData.append('category',item)
     })
     
-  const response = await fetch(`${Api_Path}/product/add-product/${firmId}`,{
+  const response = await fetch(`${Api_Path}/product/Add-product/${firmId}`,{
     method:"POST",
     body:formData
   })
@@ -78,12 +78,12 @@ const productHandler = async(e)=>{
   return (
     <div className="product-card">
        {loading && <div className="loaderSection">
-              <TailSpin
+              <ThreeCircles
                 visible={loading}
                 height={160}
                 width={130}
                 color="#4fa94d"
-                ariaLabel="tail-spin-loading"
+                ariaLabel="three-circles"
                 wrapperStyle={{}}
                 wrapperClass=""
               />  <p>Adding Product in process... Please wait</p>
